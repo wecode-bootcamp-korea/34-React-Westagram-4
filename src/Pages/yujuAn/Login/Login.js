@@ -1,5 +1,8 @@
-const JungyoungLogIn = () => {
-  return <div>Login</div>;
+import React from 'react';
+import './Login.scss';
+
+const Login = () => {
+  return <div>유주 Login</div>;
 };
 
-export default JungyoungLogIn;
+export default Login;

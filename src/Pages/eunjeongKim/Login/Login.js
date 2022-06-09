@@ -1,5 +1,8 @@
-const EunjeongLogIn = () => {
-  return <div>Login</div>;
+import React from 'react';
+import './Login.scss';
+
+const Login = () => {
+  return <div>은정 Login</div>;
 };
 
-export default EunjeongLogIn;
+export default Login;

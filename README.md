@@ -68,3 +68,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+인스타그램 4팀 프로젝트입니다 안유주,김은정,안중영
+우리는 이 프로젝트로 팀 프로젝트의 기초적인 기술을 익힙니다.
