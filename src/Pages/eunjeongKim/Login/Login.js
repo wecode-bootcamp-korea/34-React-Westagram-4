@@ -20,9 +20,9 @@ const Login = () => {
 
   const activeLogin = () => {
     if (userId !== '' && userId.indexOf('@') >= 0 && userPw.length >= 5) {
-      setUserBtn(prev => (prev = true));
+      setUserBtn(true);
     } else {
-      setUserBtn(prev => (prev = false));
+      setUserBtn(false);
     }
   };
   // userId.indexOf("@")>=0
@@ -49,7 +49,6 @@ const Login = () => {
             <input
               value={userId}
               type="text"
-              name="login_id"
               id="login_id"
               placeholder="전화번호, 사용자이름  또는 이메일"
               onInput={e => setUserId(prev => (prev = e.target.value))}
@@ -59,22 +58,19 @@ const Login = () => {
             <input
               value={userPw}
               type="password"
-              name="login_pwd"
               id="login_pwd"
               placeholder="비밀번호"
               onInput={e => setUserPw(prev => (prev = e.target.value))}
               onKeyUp={activeLogin}
             />
-            <Link to="/mainEunjeong">
-              <button
-                value={userBtn}
-                type="button"
-                id="btn"
-                className={userBtn ? 'login_input login_btn' : 'login_btn'}
-              >
-                로그인
-              </button>
-            </Link>
+
+            <button
+              disabled={false}
+              id="btn"
+              className={userBtn ? 'login_input login_btn' : 'login_btn'}
+            >
+              로그인
+            </button>
           </fieldset>
         </form>
         <section className="find">
