@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.scss';
 import './../style/common.scss';
 
@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [id, setId] = useState('');
   const [ps, setPw] = useState('');
+  const [btn, setBtn] = useState('');
 
   const navigate = useNavigate();
   const goToMain = () => {
@@ -17,6 +18,13 @@ const Login = () => {
       alert('떙 다시하세요~~');
     }
   };
+  const btnColor = (id, ps) => {
+    if (id.indexOf('@') >= 0 && ps.length >= 5) {
+      setBtn('loginyes');
+    } else {
+      setBtn('');
+    }
+  };
 
   const handleIdInput = event => {
     setId(event.target.value);
@@ -24,6 +32,12 @@ const Login = () => {
   const handlePwInput = event => {
     setPw(event.target.value);
   };
+
+  useEffect(() => {
+    btnColor(id, ps);
+  }, [id, ps]);
+
+  //useEffect(()=>{},[])
 
   return (
     <div className="hyunbeom_rapper">
@@ -50,9 +64,9 @@ const Login = () => {
               placeholder="비밀번호"
             />
             <button
-              // onClick={goToMain}
+              id="btnn"
               type="submit"
-              className="btn"
+              className={`loginno + ${btn}`}
               placeholder="로그인"
             >
               로그인
