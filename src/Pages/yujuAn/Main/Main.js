@@ -35,7 +35,11 @@ const Main = () => {
       <main id="main">
         <div className="feeds">
           <div className="imgAa">
-            <img className="sky" src="/images/yuju/sky.jpeg" />
+            <img
+              className="sky"
+              src="/images/yuju/sky.jpeg"
+              alt="this is sky"
+            />
           </div>
           <div className="feed_Icon">
             <div className="iconCon">

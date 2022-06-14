@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Login.scss';
 import './../style/common.scss';
 
@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [id, setId] = useState('');
   const [ps, setPw] = useState('');
-  const [classname, setClassname] = useState('');
 
   const navigate = useNavigate();
   const goToMain = () => {
@@ -59,9 +58,7 @@ const Login = () => {
               로그인
             </button>
           </form>
-          <p>
-            <a href="#">비밀번호를 잊으셨나요?</a>
-          </p>
+          <p>비밀번호를 잊으셨나요?</p>
         </div>
       </div>
     </div>
