@@ -17,15 +17,15 @@ const Main = () => {
           <i id="search" class="fas fa-search" />
         </div>
         <div class="icons">
-          <a href=" ">
+          <p>
             <i class="far fa-compass" />
-          </a>
-          <a href=" ">
+          </p>
+          <p>
             <i class="far fa-heart" />
-          </a>
-          <a href=" ">
+          </p>
+          <p>
             <i class="fas fa-user" />
-          </a>
+          </p>
         </div>
       </nav>
 

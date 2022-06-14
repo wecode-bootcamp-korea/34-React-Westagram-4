@@ -1,8 +1,7 @@
 import React from 'react';
 import './Login.scss';
 /*--리셋,커먼 다시보기-- */
-import './Reset.scss';
-import './common.scss';
+
 const Login = () => {
   return (
     <div class="container">
