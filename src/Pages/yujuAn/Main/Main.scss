@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrapperMain {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fafafa;
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.logoIs {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#main {
+  width: 700px;
+  height: 800px;
+  background-color: #e6e6e6;
+}
+.feeds {
+  width: 500px;
+  height: 550px;
+}
+.sky {
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+}
+
+.logoEng {
+  margin-left: 20px;
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+}
+
+.navBar {
+  height: 40px;
+  margin-top: 5px;
+}
+
+.navIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.feed_Icon {
+  width: 500px;
+  height: 100px;
+  background-color: ghostwhite;
+}
