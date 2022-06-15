@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
 * {
   text-decoration: none;
   color: inherit;
+  font-family: 'Lobster', cursive;
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 .main_wrap {
   width: 100%;
@@ -240,6 +244,7 @@ article .peed_cont .comment .comm_posting .comment_emotion {
 
 .comment_input {
   height: 40px;
+  padding-top: 20px;
 }
 
 article .peed_cont .comment .comm_posting input {
@@ -252,8 +257,8 @@ article .peed_cont .comment .comm_posting input {
 }
 
 article .peed_cont .comment .comm_posting input::placeholder {
-  font-family: 'Nanum Gothic Coding', monospace;
-  transform: translate(0%, 40%);
+  // transform: translate(0%, 40%);
+  font-size: 20px;
 }
 
 article .peed_cont .comment .comm_posting button {

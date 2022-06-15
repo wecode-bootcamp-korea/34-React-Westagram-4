@@ -2,7 +2,7 @@
 import React from 'react';
 import './Login.scss';
 // import '../../styles/reset.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Login = () => {
@@ -65,7 +65,7 @@ const Login = () => {
             />
 
             <button
-              disabled={false}
+              disabled={!userBtn}
               id="btn"
               className={userBtn ? 'login_input login_btn' : 'login_btn'}
             >
