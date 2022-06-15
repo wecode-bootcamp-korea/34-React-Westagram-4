@@ -1,11 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import './Login.scss';
 import './../style/common.scss';
-
 import { useNavigate } from 'react-router-dom';
 // import './../style/common.scss';
+const newId = 'kimkim@naver.com';
+const newPs = 'Abcd1234!';
 
 const Login = () => {
+  useEffect(() => {
+    fetch('http://10.58.6.230:8000/users/signingit', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: newId,
+        password: newPs,
+      }),
+    })
+      .then(response => response.json())
+      .then(result =>
+        localStorage.setItem('access_token', result.access_token)
+      );
+  }, []);
+
   const [id, setId] = useState('');
   const [ps, setPw] = useState('');
   const [btn, setBtn] = useState('');
