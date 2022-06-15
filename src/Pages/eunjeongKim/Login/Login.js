@@ -25,7 +25,6 @@ const Login = () => {
       setUserBtn(false);
     }
   };
-  // userId.indexOf("@")>=0
 
   return (
     <div className="log_wrap">
@@ -40,7 +39,20 @@ const Login = () => {
           id="login"
           onSubmit={event => {
             event.preventDefault();
-            goToMain();
+            fetch('http://10.58.0.63:8000/users/login', {
+              method: 'POST',
+              body: JSON.stringify({
+                email: userId,
+                password: userPw,
+              }),
+            })
+              .then(response => response.json())
+              .then(result => {
+                localStorage.setItem('ACCESS_TOKEN', result.ACCESS_TOKEN);
+                localStorage.getItem('ACCESS_TOKEN');
+                // console.log(localStorage.getItem("ACCESS_TOKEN")); <-로컬스토리지에서키가 엑세스 토큰인 토큰(데이터) 빼오는법 확인
+                // goToMain();
+              });
           }}
         >
           <fieldset>
